@@ -1,0 +1,15 @@
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.exe
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.deps.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.runtimeconfig.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.runtimeconfig.dev.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\ref\LINQ_Methods.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\bin\Debug\net5.0\LINQ_Methods.pdb
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.AssemblyInfoInputs.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.AssemblyInfo.cs
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.csproj.CoreCompileInputs.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\ref\LINQ_Methods.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.pdb
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.genruntimeconfig.cache
