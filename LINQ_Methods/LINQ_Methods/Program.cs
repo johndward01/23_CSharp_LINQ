@@ -23,13 +23,12 @@ namespace LINQ_Methods
          
         static void Main(string[] args)
         {
-
-            DecimalAverage del1 = GetDecimalAverge;
-
             // Data sources
-            int[] scores = { 90, 71, 82, 93, 75, 82 };
+            string[] names = { "John", "Jack", "joe", "Jeff", "JOHNNY", "Julie", "Jessica", "Jacky", "JILL" };
+            int[] scores = { 90, 71, 82, 93, 75, 82, 75, 75, 75 };
             int[] scoreSet1 = { 73, 84, 62 };
-            int[] scoreSet2 = { 57, 99, 86 };            
+            int[] scoreSet2 = { 57, 99, 86 };
+            var scoresCopy = scores;
             Memory<int> destinationArray = new int[100];
 
             // Query Expression
@@ -46,12 +45,17 @@ namespace LINQ_Methods
             //}
 
 
-            Func<int, bool> passing = (p => p >= 80); // All
-            IEnumerable<int> excellent = scores.Where(x => x >= 90);
+            DecimalAverage del1 = GetDecimalAverge; // Delegate
+            Func<int, bool> passing = (p => p >= 80); // Func
+            Action<int[]> avg = x => Math.Floor(x.Average()); // Action
+            Predicate<int[]> failed = x => x.Average() > 65; // Predicate
+
+            var excellent = scores.Where(x => x >= 90);
+            var seventyFives = scores.Where(x => x == 75);
 
             var tester = scores;
             var scores_Aggregate = scores.Aggregate((a, b) => a + b);
-            var scores_All = scores.All(passing);
+            var scores_All = scores.All(p => p >= 80);
             var scores_Any = scores.Any();
             var scores_Append = scores.Append(67);
             var scores_AsEnumerable = scoreSet1.AsEnumerable();
@@ -67,10 +71,22 @@ namespace LINQ_Methods
             scores.CopyTo(destinationArray);
             var scores_Count = scores.Count();
             var scores_DefaultOrEmpty = scores.DefaultIfEmpty();
-            foreach (var item in scores_DefaultOrEmpty)
-            {
-                Console.WriteLine(item);
+            var scores_Distinct = scores.Distinct();
+            var scores_ElementAt = scores.ElementAt(3); // will throw exception
+            var scores_ElementAtOrDefault = scores.ElementAtOrDefault(3);
+            var scores_Equals = scores.Equals(scoresCopy);
+            var scores_Except = scores.Except(seventyFives);
+            var scores_First = scores.First();
+            var scores_GroupBy = scores.GroupBy(x => x);
+            foreach (var score in scores_GroupBy)
+            {                
+                foreach (var x in score)
+                {
+                    Console.WriteLine(x);
+                }
+                Console.WriteLine();
             }
+            // TODO: Finish the rest of the LINQ Methods similar to above
 
         }
     }

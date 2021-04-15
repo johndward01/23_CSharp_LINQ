@@ -13,3 +13,4 @@ C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\
 C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\ref\LINQ_Methods.dll
 C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.pdb
 C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.genruntimeconfig.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\LINQ_Methods\LINQ_Methods\obj\Debug\net5.0\LINQ_Methods.csprojAssemblyReference.cache
