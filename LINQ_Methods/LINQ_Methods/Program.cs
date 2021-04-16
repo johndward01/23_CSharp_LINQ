@@ -30,6 +30,22 @@ namespace LINQ_Methods
             int[] scoreSet2 = { 57, 99, 86 };
             var scoresCopy = scores;
             Memory<int> destinationArray = new int[100];
+            
+            List<Student> studentList = new() // Use this list for the GroupJoin
+            {
+                new Student() { StudentID = 1, StudentName = "John", StandardID = 1 },
+                new Student() { StudentID = 2, StudentName = "Moin", StandardID = 1 },
+                new Student() { StudentID = 3, StudentName = "Bill", StandardID = 2 },
+                new Student() { StudentID = 4, StudentName = "Ram", StandardID = 2 },
+                new Student() { StudentID = 5, StudentName = "Ron" }
+            };
+
+            var standardList = new List<Standard>() // Use this list for the GroupJoin
+            {
+                new Standard(){ StandardID = 1, StandardName="Standard 1"},
+                new Standard(){ StandardID = 2, StandardName="Standard 2"},
+                new Standard(){ StandardID = 3, StandardName="Standard 3"}
+            };
 
             // Query Expression
             IEnumerable<int> scoreQuery = //query variable
@@ -77,15 +93,51 @@ namespace LINQ_Methods
             var scores_Equals = scores.Equals(scoresCopy);
             var scores_Except = scores.Except(seventyFives);
             var scores_First = scores.First();
+            var scores_FirstOrDefault = scores.FirstOrDefault();
+            #region var scores_GroupBy = scores.GroupBy(x => x);
             var scores_GroupBy = scores.GroupBy(x => x);
-            foreach (var score in scores_GroupBy)
-            {                
-                foreach (var x in score)
-                {
-                    Console.WriteLine(x);
-                }
-                Console.WriteLine();
+            //foreach (var score in scores_GroupBy)
+            //{                
+            //    foreach (var x in score)
+            //    {
+            //        Console.WriteLine(x);
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+            #region var scores_GroupJoin = standardList.GroupJoin(studentList...)            
+            var scores_GroupJoin = standardList.GroupJoin(studentList,
+                                                    standard => standard.StandardID,
+                                                    student => student.StandardID,
+                                                    (standard, studentGroup) => new 
+                                                    {
+                                                        StudentGroup = studentGroup,
+                                                        StandardFullName = standard.StandardName
+                                                    });
+
+            //foreach (var x in scores_GroupJoin)
+            //{
+            //    Console.WriteLine(x.StandardFullName);
+
+            //    foreach (var y in x.StudentGroup)
+            //    {
+            //        Console.WriteLine(y.StudentName);
+            //    }
+            //}
+            #endregion
+            var scores_Intersect = scores.Intersect(scoreSet1);
+            var scores_Join = studentList.Join(standardList,
+                                               stud => stud.StudentID,
+                                               stand => stand.StandardID,
+                                               (stud, stand) => stud);
+            foreach (var student in scores_Join)
+            {
+                Console.WriteLine($"{student.StudentName} {student.StudentID}");
             }
+
+
+
+
             // TODO: Finish the rest of the LINQ Methods similar to above
 
         }

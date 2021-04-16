@@ -21,6 +21,7 @@ namespace LinqExercise
              */
 
             //Print the Sum and Average of numbers
+
             //Console.WriteLine(numbers.Sum());
             //Console.WriteLine(numbers.Average());
             ////------------------------------------------------------------------------------------------------------------------------------------------------
@@ -28,31 +29,38 @@ namespace LinqExercise
             ////Order numbers in ascending order and decsending order. Print each to console.
             //Console.WriteLine("Method Syntax");
 
-            //var methodSyntaxExample1 = numbers.OrderBy(x => x);
+            //var asc = numbers.OrderByDescending(num => num);
 
-            //foreach (var num in methodSyntaxExample1)
+            //foreach (var num in asc)
             //{
             //    Console.WriteLine(num);
             //}
 
 
-            ////Console.WriteLine("Query Syntax");
+            //////Console.WriteLine("Query Syntax");
+            //var x = from number in numbers
+            //        orderby number descending
+            //        select number;
 
-            ////var querySyntaxExample1 = from num in numbers
-            ////                 orderby num descending
-            ////                 select num;
+            //foreach (var num in x)
+            //{
+            //    Console.WriteLine(num);
+            //}
 
-            ////foreach(var num in querySyntaxExample1)
-            ////{
-            ////    Console.WriteLine(num);
-            ////}
+
+            //var desc = numbers.OrderByDescending(num => num);
+
+            //foreach (var num in desc)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
             ////Console.WriteLine();
             ////------------------------------------------------------------------------------------------------------------------------------------------------
 
             ////Print to the console only the numbers greater than 6
-            //Console.WriteLine("Method Syntax");
 
-            //var methodSyntaxExample2 = numbers.Where(num => num > 6);
+            //var methodSyntaxExample2 = numbers.Where(x => x > 6);
 
             //foreach (var num in methodSyntaxExample2)
             //{
@@ -62,47 +70,35 @@ namespace LinqExercise
 
             ////Console.WriteLine("Query Syntax");
 
-            ////var querySyntaxExample2 = from num in numbers
-            ////                            where num < 6 == true
-            ////                            select num;
+            //var querySyntaxExample2 = from num in numbers
+            //                          where num > 6
+            //                          select num;
 
-            ////foreach (var num in querySyntaxExample2)
-            ////{
-            ////    Console.WriteLine(num);
-            ////}
+            //foreach (var num in querySyntaxExample2)
+            //{
+            //    Console.WriteLine(num);
+            //}
             ////Console.WriteLine();
             ////------------------------------------------------------------------------------------------------------------------------------------------------
 
             ////Order numbers in any order (acsending or desc) but only print 4 of them **foreach loop only!**
             //Console.WriteLine("Method Syntax");
 
-            //foreach (var num in numbers.OrderBy(x => x))
+
+            //foreach (var num in numbers.Take(4).OrderBy(x => x))
             //{
             //    Console.WriteLine(num);
             //}
 
 
-            ////Console.WriteLine("Query Syntax");
-
-            ////var querySyntaxExample3 = from num in numbers
-            ////                orderby num descending
-            ////                select num;
-
-            ////foreach (var item in querySyntaxExample3)
-            ////{
-            ////    Console.WriteLine(item);
-            ////}
-            ////Console.WriteLine();
-            ////------------------------------------------------------------------------------------------------------------------------------------------------
 
             ////Change the value at index 4 to your age, then print the numbers in decsending order
-            //Console.WriteLine("Method Syntax");
 
-            //numbers[4] = 29; //This changes the 4th value for both examples 
+            //numbers[4] = 30; //This changes the 4th value for both examples 
+            //numbers.SetValue(30, 4);
+            //var age = numbers.Select((x,i) => i == 4 ? 30 : x);
 
-            //var methodSyntaxExample3 = numbers.OrderByDescending(num => num);
-
-            //foreach (var num in methodSyntaxExample3)
+            //foreach (var num in age)
             //{
             //    Console.WriteLine(num);
             //}
@@ -124,45 +120,55 @@ namespace LinqExercise
             // List of employees ***Do not remove this***
             var employees = CreateEmployees();
 
-            //Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S.
-            var firstName = employees.FindAll(name => (name.FirstName[0] =='C' || name.FirstName[0] == 'S')).OrderBy(x => x.FirstName);  
-            foreach(var fName in firstName)
-            {
-                Console.WriteLine(fName.FirstName);
-            }
-            
-            
+            ////Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S.
+            //var firstName = employees.Where(name => (name.FirstName[0] == 'C' || name.FirstName[0] == 'S')).OrderBy(x => x.FirstName);
+            //var firstName = employees.Where(name => name.FirstName.Contains('S') || name.FirstName.Contains('C')).OrderBy(x => x.FirstName);
+            //foreach (var name in firstName)
+            //{
+            //    Console.WriteLine(name.FullName);
+            //}
+
+
             //------------------------------------------------------------------------------------------------------------------------
 
             //Print all the employees' FullName and Age who are over the age 26 to the console.
-            //var over26 = employees.FindAll(age => age.Age > 26);
-            //foreach(var age in over26)
-            //{
-            //    Console.WriteLine($"{age.FirstName} {age.Age}");
-            //}
-            ////------------------------------------------------------------------------------------------------------------------------
-
             ////Order this by Age first and then by FirstName in the same result.
-            //var ageFName = over26.OrderBy(age => age.Age).ThenBy(fName => fName.FirstName);
+            ///
+            //var over26 = employees.Where(x => x.Age > 26).OrderBy(x => x.Age).ThenBy(x => x.FirstName);
+            //foreach (var age in over26)
+            //{
+            //    Console.WriteLine($"{age.FullName} {age.Age}");
+            //}
+            //------------------------------------------------------------------------------------------------------------------------
+
+
+
+
             ////------------------------------------------------------------------------------------------------------------------------
 
             ////Print the Sum and then the Average of the employees' YearsOfExperience 
             ////if their YOE is less than or equal to 10 AND Age is greater than 35
             //int yrsOfExp = 0;
+
             //var beginner = employees.Where(emp => emp.YearsOfExperience <= 10 && emp.Age > 35);
-            //foreach(var i in beginner)
+
+            //foreach (var i in beginner)
             //{
-            //     yrsOfExp += i.YearsOfExperience;
+            //    yrsOfExp += i.YearsOfExperience;
             //}
-            //int numOfEmp = beginner.Count();
             //Console.WriteLine("YearsOfExperience: " + yrsOfExp);
-            //Console.WriteLine("Average of YearsOfExperience: " + yrsOfExp / numOfEmp);
+            //Console.WriteLine("Average of YearsOfExperience: " + yrsOfExp / beginner.Count());
             ////------------------------------------------------------------------------------------------------------------------------
 
-            ////Add an employee to the end of the list without using employees.Add()
-            //employees.Append(new Employee("Jacky", "Chan", 11, 11));            
+            //Add an employee to the end of the list without using employees.Add()
+            employees = employees.Append(new Employee("Jacky", "Chan", 11, 11)).ToList();
 
-            //Console.ReadLine();
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee.FullName);
+            }
+
+            Console.ReadLine();
         }
 
         #region CreateEmployeesMethod

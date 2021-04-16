@@ -11,3 +11,16 @@ C:\Users\johnd\Desktop\TA_repo\23_C#_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcorea
 C:\Users\johnd\Desktop\TA_repo\23_C#_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.dll
 C:\Users\johnd\Desktop\TA_repo\23_C#_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.pdb
 C:\Users\johnd\Desktop\TA_repo\23_C#_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.genruntimeconfig.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.exe
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.deps.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.runtimeconfig.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.runtimeconfig.dev.json
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\bin\Debug\netcoreapp3.1\Linq_Demo.pdb
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.csprojAssemblyReference.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.AssemblyInfoInputs.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.AssemblyInfo.cs
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.csproj.CoreCompileInputs.cache
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.dll
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.pdb
+C:\Users\johnd\Desktop\Repos\23_CSharp_LINQ\Linq_Demo\Linq_Demo\obj\Debug\netcoreapp3.1\Linq_Demo.genruntimeconfig.cache
