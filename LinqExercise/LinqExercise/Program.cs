@@ -121,12 +121,12 @@ namespace LinqExercise
             var employees = CreateEmployees();
 
             ////Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S.
-            //var firstName = employees.Where(name => (name.FirstName[0] == 'C' || name.FirstName[0] == 'S')).OrderBy(x => x.FirstName);
+            var firstName = employees.Where(name => (name.FirstName[0] == 'C' || name.FirstName[0] == 'S')).OrderBy(x => x.FirstName);
             //var firstName = employees.Where(name => name.FirstName.Contains('S') || name.FirstName.Contains('C')).OrderBy(x => x.FirstName);
-            //foreach (var name in firstName)
-            //{
-            //    Console.WriteLine(name.FullName);
-            //}
+            foreach (var name in firstName)
+            {
+                Console.WriteLine(name.FullName);
+            }
 
 
             //------------------------------------------------------------------------------------------------------------------------

@@ -126,6 +126,8 @@ namespace LINQ_Methods
             //}
             #endregion
             var scores_Intersect = scores.Intersect(scoreSet1);
+            #region var scores_Join = studentList.Join(standardList...)
+
             var scores_Join = studentList.Join(standardList,
                                                stud => stud.StudentID,
                                                stand => stand.StandardID,
@@ -135,6 +137,7 @@ namespace LINQ_Methods
                 Console.WriteLine($"{student.StudentName} {student.StudentID}");
             }
 
+            #endregion
 
 
 
